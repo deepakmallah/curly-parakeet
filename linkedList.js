@@ -143,8 +143,9 @@ class LinkedList {
     var str = '';
 
     while(current) {
-      str += current.element + ", ";
+      str += current.element;
 
+      if(current.next) str +=  " -> ";
       current = current.next;
     }
 
@@ -152,30 +153,31 @@ class LinkedList {
   }
 }
 
-
-var LL = new LinkedList();
-
-LL.isEmpty();
-LL.sizeOfList();
-LL.add("a");
-LL.add("b");
-LL.add("c");
-
-LL.removeFrom(2);
-LL.PrintList();
-
-LL.add("d");
-LL.PrintList();
-LL.add("e");
-LL.add("f");
-LL.sizeOfList();
-LL.add("g");
-LL.add("e");
-LL.add("h");
-LL.removeElement('e');
-LL.add("i");
-
-LL.insertAt("z", 1);
-LL.PrintList();
-LL.sizeOfList();
-LL.isEmpty();
+module.exports = LinkedList;
+//
+// var LL = new LinkedList();
+//
+// LL.isEmpty();
+// LL.sizeOfList();
+// LL.add("a");
+// LL.add("b");
+// LL.add("c");
+//
+// LL.removeFrom(2);
+// LL.PrintList();
+//
+// LL.add("d");
+// LL.PrintList();
+// LL.add("e");
+// LL.add("f");
+// LL.sizeOfList();
+// LL.add("g");
+// LL.add("e");
+// LL.add("h");
+// LL.removeElement('e');
+// LL.add("i");
+//
+// LL.insertAt("z", 1);
+// LL.PrintList();
+// LL.sizeOfList();
+// LL.isEmpty();
